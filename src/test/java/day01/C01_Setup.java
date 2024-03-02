@@ -4,7 +4,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -13,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
-public class C01_Calculator {
+public class C01_Setup {
     AndroidDriver<AndroidElement> driver; // It enables us to perform operations on Android devices.
     //IOSDriver<IOSElement> iosDriver; - It enables us to perform operations on iOS devices.
     //AppiumDriver<MobileElement> appiumDriver; - It enables us to perform operations on both devices.
