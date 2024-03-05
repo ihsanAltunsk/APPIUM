@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class Calculator {
+public class CalculatorApp {
     AndroidDriver<AndroidElement> driver;
     @Test
     public void deneme() throws MalformedURLException {
