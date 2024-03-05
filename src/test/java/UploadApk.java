@@ -14,7 +14,7 @@ public class UploadApk {
     @Test
     public void apkYukleme() throws MalformedURLException {
         DesiredCapabilities capabilities=new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Pixel 2");// capabilities.setCapability("deviceName","Pixel 2");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"PIXEL");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10.0");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
