@@ -18,10 +18,10 @@ public class UploadApk {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10.0");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
-        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\ahmet\\IdeaProjects\\Appium_T127\\Apps\\arabam.com_5.1.6_Apkpure.apk");
+        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\user\\IdeaProjects\\Appium\\Apps\\Kiwi.com - Book Cheap Flights_2023.14.0_Apkpure (1) - Copy.apk");
         //uiAutomator2 works only for Android systems from version 6 and above.
         //uiAutomator, on the other hand, works for version 6 and below.
         driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 }

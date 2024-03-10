@@ -43,7 +43,7 @@ public class Driver {
             if (ConfigReader.getProperty("platformName").equals("Android")) {
                 assert appiumServerURL != null;
                 appiumDriver = new AndroidDriver<AndroidElement>(appiumServerURL,caps);
-                appiumDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+                appiumDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             }else {
                 throw new UnsupportedOperationException("Invalid Platform Name ");
             }
