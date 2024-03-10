@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     private static AndroidDriver<AndroidElement> appiumDriver;
-    static final String TELEPHONENAME ="PIXEL 2";
+    static final String TELEPHONENAME ="PIXEL";
     static final String ANDROIDVERSION="10.0";
     static final String PLATFORM="Android";
     static final String AUTOMATIONNAME ="UiAutomator2";

@@ -22,7 +22,7 @@ public class ArabamApp {
     @BeforeTest
     public void arabamSetUp() throws MalformedURLException {
         DesiredCapabilities capabilities=new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Pixel 2");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"PIXEL");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10.0");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
@@ -35,7 +35,7 @@ public class ArabamApp {
         // The entered activity value to determine from which page of the application identified in AppPackage will be started.
 
         driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @Test
@@ -59,7 +59,7 @@ public class ArabamApp {
                                                                   // Width and height information are obtained from the inspector.
                 .release() // After performing the click operation, lifting our finger from the screen to ensure that the click is executed.
                 .perform(); // The command given to the action methods to perform the given action tasks.
-        Thread.sleep(2000);
+        Thread.sleep(500);
 
         for (int i=0; i<5; i++){
             action
@@ -82,7 +82,7 @@ public class ArabamApp {
 
         // Select 1.4 TSI BlueMotion option.
         driver.findElementByXPath("//*[@text='1.4 TSi BlueMotion']").click();
-        Thread.sleep(1000);
+        Thread.sleep(500);
 
         // Make package selection.
         // 500 700
@@ -90,11 +90,11 @@ public class ArabamApp {
                 .press(PointOption.point(500,700))
                 .release()
                 .perform();
-        Thread.sleep(1000);
+        Thread.sleep(500);
 
         // Do filtering by sorting from cheap to expensive.
         driver.findElementById("com.dogan.arabam:id/textViewSorting").click();
-        Thread.sleep(1000);
+        Thread.sleep(500);
         driver.findElementByXPath("//*[@text='Fiyat - Ucuzdan Pahalıya']").click();
 
         // Confirm that the cheapest incoming vehicle is greater than 500,000 TL.
