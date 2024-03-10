@@ -10,14 +10,13 @@ import utilities.ReusableMethods;
 import static org.testng.Assert.assertTrue;
 
 public class KiwiApp {
-
+    KiwiPage kiwiPage = new KiwiPage();
     @Test
     public void kiwiAppTest() throws InterruptedException {
         // Verify that the application is installed.
         Driver.getAndroidDriver().isAppInstalled(ConfigReader.getProperty("kiwiBundle"));
 
         // Confirm that the application is successfully opened.
-        KiwiPage kiwiPage = new KiwiPage();
         assertTrue(kiwiPage.verifyElement.isDisplayed());
 
         // Click on "Continue as a guest".
@@ -67,7 +66,7 @@ public class KiwiApp {
         ReusableMethods.clickOnCoordinate(563,584);
         ReusableMethods.clickOnCoordinate(519,256);
         ReusableMethods.clickOnCoordinate(511,1458);
-
+        Thread.sleep(2000);
         // Save the incoming ticket price and send it to the user's phone as an SMS.
         String ticketPrice = kiwiPage.price.getText();
         Driver.getAndroidDriver().sendSMS("55555555555555",
